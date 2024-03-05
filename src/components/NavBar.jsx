@@ -8,7 +8,7 @@ const NavBar = () => {
         <div className="w-[50%] flex items-center justify-start ">
           <Link
             to="/"
-            className="hidden sm:block drop-shadow-2xl text-3xl custom-text-color font-custom2 font-bold cursor-pointer"
+            className="hidden sm:block drop-shadow-2xl text-4xl custom-text-color font-custom3 font-bold cursor-pointer"
           >
             Ayush Kumar
           </Link>

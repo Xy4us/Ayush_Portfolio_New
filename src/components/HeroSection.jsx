@@ -1,4 +1,4 @@
-import { motion, useAnimation, useInView, useMotionValue } from "framer-motion";
+import { motion, useAnimation, useMotionValue } from "framer-motion";
 import {
   slideInFromBottom,
   slideInFromLeft,
@@ -17,10 +17,12 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 import SliderFic from "./SliderFic.jsx";
 import Marquee from "react-fast-marquee";
+import { useInView } from "react-intersection-observer";
 
 const HeroSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const { ref, inView } = useInView({
+    triggerOnce: false, // Change to false if you want to trigger every time it comes into view
+  });
 
   const [isHovered, setIsHovered] = useState(false);
   const [rect, setRect] = useState({ width: 0, height: 0 }); // Add this line
@@ -42,14 +44,11 @@ const HeroSection = () => {
   };
 
   return (
-    <div
-      className="w-full min-h-screen flex items-start justify-center"
-      ref={ref}
-    >
+    <div className="w-full flex items-start justify-center">
       <div className="w-[75%] flex flex-col-reverse items-center justify-center gap-y-10">
         <SliderFic />
         <motion.div
-          className="w-[90%] rounded-xl flex flex-col items-center justify-between p-2 px-8 border-[0.25px] border-solid border-primary backdrop-blur-[3px]"
+          className="w-[90%] rounded-2xl flex flex-col items-center justify-between p-2 px-8 border-[0.5px] border-solid border-primary backdrop-blur-[3px]"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           style={{
@@ -71,6 +70,7 @@ const HeroSection = () => {
           <motion.div
             className="w-full flex justify-between items-center"
             variants={slideInFromBottom(1.25)}
+            ref={ref}
             initial="hidden"
             animate="visible"
           >
@@ -106,8 +106,8 @@ const HeroSection = () => {
                 Hi<span className="custom-text-color">!</span> I Am{" "}
                 <span
                   style={{
-                    transform: isInView ? "none" : "translateX(-200px)",
-                    opacity: isInView ? 1 : 0,
+                    transform: inView ? "none" : "translateX(-200px)",
+                    opacity: inView ? 1 : 0,
                     transition: "all 7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
                   }}
                   className="font-custom1 custom-text-color"

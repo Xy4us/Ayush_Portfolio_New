@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         custom1: ["Madimi One", "Sans"],
         custom2: ["Dancing Script", "Sans"],
+        custom3: ["Great Vibes", "Sans"],
       },
       colors: {
         primary: "var(--primary-color)",

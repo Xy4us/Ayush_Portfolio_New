@@ -10,7 +10,7 @@ const DesignSectoin = () => {
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i) => {
-      const delay = 1 + i * 0.5;
+      const delay = 0 + i * 0.25;
       return {
         pathLength: 1,
         opacity: 1,
@@ -29,12 +29,13 @@ const DesignSectoin = () => {
       viewBox="0 0 600 600"
       initial="hidden"
       animate={inView ? "visible" : ""}
+      className="mt-32"
     >
       <motion.circle
         cx="100"
         cy="100"
         r="80"
-        stroke="#ff0055"
+        stroke="#9d59ef"
         variants={draw}
         custom={1}
       />
@@ -43,7 +44,7 @@ const DesignSectoin = () => {
         y1="30"
         x2="360"
         y2="170"
-        stroke="#00cc88"
+        stroke="#00fbff"
         variants={draw}
         custom={2}
       />
@@ -52,7 +53,7 @@ const DesignSectoin = () => {
         y1="170"
         x2="360"
         y2="30"
-        stroke="#00cc88"
+        stroke="#00fbff"
         variants={draw}
         custom={2.5}
       />
@@ -62,7 +63,7 @@ const DesignSectoin = () => {
         x="410"
         y="30"
         rx="20"
-        stroke="#0099ff"
+        stroke="#dd524b"
         variants={draw}
         custom={3}
       />
@@ -70,7 +71,7 @@ const DesignSectoin = () => {
         cx="100"
         cy="300"
         r="80"
-        stroke="#0099ff"
+        stroke="#00fbff"
         variants={draw}
         custom={2}
       />
@@ -79,7 +80,7 @@ const DesignSectoin = () => {
         y1="230"
         x2="360"
         y2="370"
-        stroke="#ff0055"
+        stroke="#dd524b"
         custom={3}
         variants={draw}
       />
@@ -88,7 +89,7 @@ const DesignSectoin = () => {
         y1="370"
         x2="360"
         y2="230"
-        stroke="#ff0055"
+        stroke="#dd524b"
         custom={3.5}
         variants={draw}
       />
@@ -98,7 +99,7 @@ const DesignSectoin = () => {
         x="410"
         y="230"
         rx="20"
-        stroke="#00cc88"
+        stroke="#9d59ef"
         custom={4}
         variants={draw}
       />
@@ -106,7 +107,7 @@ const DesignSectoin = () => {
         cx="100"
         cy="500"
         r="80"
-        stroke="#00cc88"
+        stroke="#dd524b"
         variants={draw}
         custom={3}
       />
@@ -115,7 +116,7 @@ const DesignSectoin = () => {
         y1="430"
         x2="360"
         y2="570"
-        stroke="#0099ff"
+        stroke="#9d59ef"
         variants={draw}
         custom={4}
       />
@@ -124,7 +125,7 @@ const DesignSectoin = () => {
         y1="570"
         x2="360"
         y2="430"
-        stroke="#0099ff"
+        stroke="#9d59ef"
         variants={draw}
         custom={4.5}
       />
@@ -134,7 +135,7 @@ const DesignSectoin = () => {
         x="410"
         y="430"
         rx="20"
-        stroke="#ff0055"
+        stroke="#00fbff"
         variants={draw}
         custom={5}
       />

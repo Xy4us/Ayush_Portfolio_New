@@ -2,8 +2,8 @@ import React from "react";
 import HeroSection from "./HeroSection";
 import HeroSections from "./HeroSections";
 import Spline from "@splinetool/react-spline";
-import ParallaxText from "./ParallexText";
 import DesignSectoin from "./DesignSectoin";
+import About from "./About";
 
 const HomePage = () => {
   return (
@@ -17,6 +17,7 @@ const HomePage = () => {
 
       <HeroSection />
       <DesignSectoin />
+      <About />
     </div>
   );
 };
