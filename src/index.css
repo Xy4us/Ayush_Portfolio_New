@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Madimi+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,8 +8,19 @@ body {
   background-color: #030014;
   color: white;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #9d59ef;
+  --secondary-color: #dd524b;
+  --tertiary-color: #00fbff;
 }
 
 .custom-text-color {
-  @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-[#9d59ef] to-[#dd524b] bg-clip-text text-transparent;
+}
+
+.shadow-custom-color {
+  box-shadow: 1px 4px 4px 1px #9d59ef;
 }

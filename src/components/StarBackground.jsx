@@ -21,7 +21,7 @@ const StarBackground = (props) => {
     return points;
   };
 
-  const [sphere] = useState(() => randomInSphere(5000, 1.2));
+  const [sphere] = useState(() => randomInSphere(5000, 1.5));
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
@@ -44,7 +44,7 @@ const StarBackground = (props) => {
 };
 
 const StarsCanvas = () => (
-  <div className="w-full min-h-screen fixed inset-0 z-[5]">
+  <div className="w-full min-h-screen fixed inset-0 z-[-10]">
     <Canvas camera={{ position: [0, 0, 1] }}>
       <Suspense fallback={null}>
         <StarBackground />

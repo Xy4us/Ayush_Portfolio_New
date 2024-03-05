@@ -1,32 +1,26 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { slideInFromTop } from "../utils/motion.ts";
-import { SparklesIcon } from "@heroicons/react/24/solid";
+import { motion, useSpring, useScroll } from "framer-motion";
 import StarsCanvas from "./StarBackground";
-import BlackHole from "./BlackHole";
 import NavBar from "./NavBar";
-import Spline from "@splinetool/react-spline";
+import HomePage from "./HomePage.jsx";
 
 const Home = () => {
-  return (
-    // <motion.div
-    //   initial={{ opacity: 0 }}
-    //   animate={{ opacity: 1 }}
-    //   className="w-full min-h-screen"
-    // >
-    //   <motion.div variants={slideInFromTop}>
-    //     <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5 " />
-    //     <h1 className="text-4xl font-bold">Welcome to your new app</h1>
-    //   </motion.div>
-    // </motion.div>
+  const { scrollYProgress } = useScroll();
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
+  return (
     <div className="flex flex-col">
+      <div className="h-1 w-1 p-1 absolute rounded-full top-[238px] left-[238px] bg-transparent z-[10] border-[0.25px] border-tertiary border-solid"></div>
+      <motion.div
+        className="absolute rounded-3xl top-60 left-60 origin-top h-screen w-1 bg-gradient-to-b from-black via-primary to-secondary"
+        style={{ scaleY }}
+      />
       <NavBar />
       <StarsCanvas />
-      {/* <div className="z-[30] absolute top-20 left-0">
-        <Spline scene="https://prod.spline.design/LIY5q682aUCCvBJJ/scene.splinecode" />
-      </div> */}
-      <BlackHole />
+      <HomePage />
     </div>
   );
 };
