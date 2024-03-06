@@ -25,3 +25,15 @@ body {
 .shadow-custom-color {
   box-shadow: 1px 4px 4px 1px #9d59ef;
 }
+
+circle,
+rect,
+line {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+.active {
+  color: var(--tertiary-color);
+}

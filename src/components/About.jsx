@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { slideInFromBottom, slideInFromRight } from "../utils/motion.ts";
+import {
+  slideInFromBottom,
+  slideInFromLeft,
+  slideInFromRight,
+} from "../utils/motion.ts";
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -9,10 +13,13 @@ const About = () => {
   });
 
   return (
-    <div className="mt-20 w-full flex flex-col items-center justify-center">
+    <div
+      className="mt-20 w-full flex flex-col items-center justify-center"
+      id="about"
+    >
       <motion.h1
         className="font-serif text-6xl font-bold text-primary p-2"
-        variants={slideInFromRight(0.5)}
+        variants={slideInFromRight(1)}
         ref={ref}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -20,8 +27,7 @@ const About = () => {
         About
       </motion.h1>
       <motion.p
-        variants={slideInFromBottom(0.5)}
-        ref={ref}
+        variants={slideInFromLeft(1.5)}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         className="custom-text-color font-custom2 font-semibold text-2xl p-2 "

@@ -1,9 +1,5 @@
-import { motion, useAnimation, useMotionValue } from "framer-motion";
-import {
-  slideInFromBottom,
-  slideInFromLeft,
-  slideInFromTop,
-} from "../utils/motion.ts";
+import { motion, useMotionValue } from "framer-motion";
+import { slideInFromBottom } from "../utils/motion.ts";
 import Ayush from "../utils/assets/Ayush.png";
 import { ReactTyped } from "react-typed";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,11 +8,9 @@ import {
   faGithub,
   faDiscord,
   faLinkedinIn,
-  faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import SliderFic from "./SliderFic.jsx";
-import Marquee from "react-fast-marquee";
 import { useInView } from "react-intersection-observer";
 
 const HeroSection = () => {
@@ -53,12 +47,12 @@ const HeroSection = () => {
           onMouseLeave={handleMouseLeave}
           style={{
             background: isHovered
-              ? `radial-gradient(circle at ${mouseX.get()}px ${mouseY.get()}px, rgba(255,255,255, 0.1) 10%, rgba(255,255,255,0) 0%)`
+              ? `radial-gradient(circle at ${mouseX.get()}px ${mouseY.get()}px, rgba(0, 251, 255, 0.451) 10%, rgba(255,255,255,0) 0%)`
               : "",
             transform: isHovered
               ? `perspective(300px) rotateY(${
-                  (mouseX.get() / rect.width - 0.5) * 3
-                }deg) rotateX(${(mouseY.get() / rect.height - 0.5) * 3}deg)`
+                  (mouseX.get() / rect.width - 0.5) * 5
+                }deg) rotateX(${(mouseY.get() / rect.height - 0.5) * 5}deg)`
               : "none",
             boxShadow: isHovered
               ? `${(mouseX.get() / rect.width - 0.5) * 20}px ${
@@ -77,25 +71,25 @@ const HeroSection = () => {
             <ul className="flex items-center justify-between flex-col-reverse gap-y-5">
               <li>
                 <FontAwesomeIcon
-                  className="text-[#bd5c7b] text-xl cursor-pointer"
+                  className="text-[#bd5c7b] hover:text-black ease-in-out duration-150 text-xl cursor-pointer"
                   icon={faInstagram}
                 />
               </li>
               <li>
                 <FontAwesomeIcon
-                  className="text-[#bd5c7b] text-xl cursor-pointer"
+                  className="text-[#bd5c7b] text-xl hover:text-black ease-in-out duration-150 cursor-pointer"
                   icon={faDiscord}
                 />
               </li>
               <li>
                 <FontAwesomeIcon
-                  className="text-[#bd5c7b] text-xl cursor-pointer"
+                  className="text-[#bd5c7b] hover:text-black ease-in-out duration-150 text-xl cursor-pointer"
                   icon={faGithub}
                 />
               </li>
               <li>
                 <FontAwesomeIcon
-                  className="text-[#bd5c7b] text-xl cursor-pointer"
+                  className="text-[#bd5c7b] hover:text-black ease-in-out duration-150 text-xl cursor-pointer"
                   icon={faLinkedinIn}
                 />
               </li>
