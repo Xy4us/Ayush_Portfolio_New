@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const DesignSectoin = () => {
+const DesignSection = () => {
   const { ref, inView } = useInView({
     triggerOnce: false, // Change to false if you want to trigger every time it comes into view
   });
@@ -143,4 +143,4 @@ const DesignSectoin = () => {
   );
 };
 
-export default DesignSectoin;
+export default DesignSection;

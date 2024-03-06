@@ -2,7 +2,7 @@ import React from "react";
 import HeroSection from "./HeroSection";
 import HeroSections from "./HeroSections";
 import Spline from "@splinetool/react-spline";
-import DesignSectoin from "./DesignSectoin";
+import DesignSection from "./DesignSection";
 
 const HomePage = () => {
   return (
@@ -15,7 +15,7 @@ const HomePage = () => {
       </div>
 
       <HeroSection />
-      <DesignSectoin />
+      <DesignSection />
     </div>
   );
 };
