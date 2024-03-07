@@ -47,7 +47,7 @@ const HeroSection = () => {
           onMouseLeave={handleMouseLeave}
           style={{
             background: isHovered
-              ? `radial-gradient(circle at ${mouseX.get()}px ${mouseY.get()}px, rgba(0, 251, 255, 0.451) 10%, rgba(255,255,255,0) 0%)`
+              ? `radial-gradient(circle at ${mouseX.get()}px ${mouseY.get()}px, rgba(0, 251, 255, 0.451) 7%, rgba(255,255,255,0) 0%)`
               : "",
             transform: isHovered
               ? `perspective(300px) rotateY(${

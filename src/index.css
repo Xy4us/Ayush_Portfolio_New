@@ -5,6 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scrollbar-color: #9c59ef71 #030014;
+  scrollbar-width: thin;
+  scroll-padding: 0 10px;
+}
+
 body {
   background-color: #030014;
   color: white;
@@ -36,4 +42,34 @@ line {
 
 .active {
   color: var(--tertiary-color);
+}
+
+.image-animate {
+  animation: image-animate 5s linear infinite alternate;
+}
+
+@keyframes image-animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    /* transform: scale3d(0, 0, 1);
+    transform: rotate(0deg); */
+  }
+
+  25% {
+    transform: translateY(-25px) rotate(7deg);
+    /* transform: scale3d(0, 1, 0);
+    transform: rotate(7deg); */
+  }
+
+  50% {
+    transform: translateY(-40px) rotate(15deg);
+    /* transform: scale3d(1, 0, 0);
+    transform: rotate(15deg); */
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+    /* transform: scale3d(0, 0, 1);
+    transform: rotate(0deg); */
+  }
 }

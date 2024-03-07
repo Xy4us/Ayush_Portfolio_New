@@ -54,7 +54,16 @@ export const slideInFromBottom = (delay: number) => {
   };
 };
 
-// export interface ParallaxProps {
-//   children: string;
-//   baseVelocity: number;
-// }
+export const slideInFromInside = (delay: number) => {
+  return {
+    hidden: { z: -500, scale: 0 },
+    visible: {
+      z: 0,
+      scale: 1,
+      transition: {
+        delay: delay,
+        duration: 0.5,
+      },
+    },
+  };
+};

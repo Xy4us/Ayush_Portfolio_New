@@ -25,11 +25,11 @@ const DesignSection = () => {
     <motion.svg
       width="600"
       ref={ref}
-      height="600"
-      viewBox="0 0 600 600"
+      viewBox="0 0 600 400"
       initial="hidden"
+      height="400"
       animate={inView ? "visible" : ""}
-      className="mt-32"
+      className="mt-24 mb-6"
     >
       <motion.circle
         cx="100"
@@ -103,7 +103,7 @@ const DesignSection = () => {
         custom={4}
         variants={draw}
       />
-      <motion.circle
+      {/* <motion.circle
         cx="100"
         cy="500"
         r="80"
@@ -138,7 +138,7 @@ const DesignSection = () => {
         stroke="#00fbff"
         variants={draw}
         custom={5}
-      />
+      /> */}
     </motion.svg>
   );
 };

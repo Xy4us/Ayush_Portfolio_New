@@ -1,42 +1,40 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import {
-  slideInFromBottom,
-  slideInFromLeft,
-  slideInFromRight,
-} from "../utils/motion.ts";
+import { Tilt } from "react-tilt";
+import AboutPage from "./AboutPage";
+import robo2 from "../utils/assets/robo2.png";
+import star1 from "../utils/assets/star1.png";
 
 const About = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: false, // Change to false if you want to trigger every time it comes into view
-  });
-
   return (
     <div
-      className="mt-20 w-full flex flex-col items-center justify-center"
+      className=" w-full flex h-screen flex-col items-center justify-start"
       id="about"
     >
-      <motion.h1
-        className="font-serif text-6xl font-bold text-primary p-2"
-        variants={slideInFromRight(1)}
-        ref={ref}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-      >
-        About
-      </motion.h1>
-      <motion.p
-        variants={slideInFromLeft(1.5)}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        className="custom-text-color font-custom2 font-semibold text-2xl p-2 "
-      >
-        My Introduction
-      </motion.p>
-      <div className="flex w-[90%] flex-col">
-        <motion.div className="w-[50%]"></motion.div>
-      </div>
+      <div className="w-1 min-h-11 bg-transparent"></div>
+      <Tilt className="w-[200px] h-[200px] absolute right-52 rounded-full ">
+        <img
+          alt="image"
+          src={robo2}
+          loading="lazy"
+          decoding="async"
+          height="200"
+          width="200"
+          aria-hidden="true"
+          className="image-animate rotate-90 rounded-full shadow-lg shadow-[#3f67e1]/40 "
+        />
+      </Tilt>
+      <Tilt className="absolute left-52 h-[140px] w-[140px]">
+        <img
+          alt="image"
+          src={star1}
+          loading="lazy"
+          decoding="async"
+          height="140"
+          width="140"
+          aria-hidden="true"
+          className="image-animate rounded-full shadow-lg shadow-[#3f67e1]/40 p-2"
+        />
+      </Tilt>
+      <AboutPage />
     </div>
   );
 };

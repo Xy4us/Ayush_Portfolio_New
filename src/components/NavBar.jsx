@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 const NavBar = () => {
   return (
-    <div className="w-full fixed flex top-0 justify-center items-center z-[50] shadow-lg shadow-[#2A0E61]/50 backdrop-blur-sm">
+    <div className="w-full fixed flex top-0 justify-center items-center z-[50] shadow-lg shadow-[#6873c5]/40  backdrop-blur-sm">
       <div className="w-full rounded-lg p-2 md:w-[75%] flex justify-between ">
         <div className="w-[50%] flex items-center justify-start ">
           <Link className="hidden sm:block drop-shadow-2xl text-4xl custom-text-color font-custom3 font-bold cursor-pointer">
@@ -24,13 +24,13 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={750}
-            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-xl"
+            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-lg"
           >
             Home
           </Link>
           <Link
             activeClass="active"
-            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-xl"
+            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-lg"
             to="about"
             spy={true}
             smooth={true}
@@ -44,7 +44,7 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={750}
-            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-xl"
+            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-lg"
           >
             Skills
           </Link>
@@ -54,7 +54,7 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={750}
-            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-xl"
+            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-lg"
           >
             Projects
           </Link>
@@ -64,7 +64,7 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={750}
-            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-xl"
+            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-lg"
           >
             Contact Me
           </Link>

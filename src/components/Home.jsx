@@ -13,10 +13,10 @@ const Home = () => {
   });
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col h-full gap-y-20">
       {/* <div className="h-2 w-2 p-2 absolute rounded-full top-[238px] left-[234px] bg-primary z-[7]"></div> */}
       <motion.div
-        className="absolute rounded-3xl top-60 left-60 origin-top h-screen w-1 bg-gradient-to-b from-black via-primary to-secondary"
+        className="absolute rounded-3xl top-60 left-60 h-[2000px] origin-top  w-1 bg-gradient-to-b from-black via-primary to-secondary"
         style={{ scaleY }}
       />
       <NavBar />
