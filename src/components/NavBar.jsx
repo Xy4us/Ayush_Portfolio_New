@@ -6,7 +6,10 @@ const NavBar = () => {
     <div className="w-full fixed flex top-0 justify-center items-center z-[50] shadow-lg shadow-[#6873c5]/40  backdrop-blur-sm">
       <div className="w-full rounded-lg p-2 md:w-[75%] flex justify-between ">
         <div className="w-[50%] flex items-center justify-start ">
-          <Link className="hidden sm:block drop-shadow-2xl text-4xl custom-text-color font-custom3 font-bold cursor-pointer">
+          <Link
+            to="/"
+            className="hidden sm:block drop-shadow-2xl text-4xl custom-text-color font-custom3 font-bold cursor-pointer"
+          >
             Ayush Kumar
           </Link>
 

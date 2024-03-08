@@ -41,7 +41,7 @@ const AboutSection = () => {
           </Tilt>
         </motion.div>
         <motion.div
-          className="w-[50%] items-center justify-start flex flex-col h-full py-5 px-3 gap-y-3 text-xl text-justify"
+          className="w-[50%] items-center justify-start flex flex-col h-full py-5 px-3 gap-y-3 text-xl text-justify leading-8 tracking-wide"
           variants={slideInFromRight(2.2)}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -54,7 +54,7 @@ const AboutSection = () => {
             <span className=" text-tertiary">
               {new Date().getFullYear() - new Date("2004-01-13").getFullYear()}
             </span>
-            -year-old CSE undergrad. I'm a skilled software developer with
+            -year-old CSE-(AI) undergrad. I'm a skilled software developer with
             experience in{" "}
             {skills.map((item, index) => (
               <span key={index} className="text-tertiary">
@@ -78,7 +78,7 @@ const AboutSection = () => {
           </p>
         </motion.div>
       </div>
-      <div className="cursor-pointer p-4 px-7 hover:scale-110 font-semibold duration-200 ease-in-out rounded-lg bg-transparent shadow-custom-color flex items-center gap-x-2">
+      <div className="cursor-pointer p-4 px-7 hover:scale-110 font-semibold duration-200 ease-in-out rounded-lg bg-transparent shadow-custom-color flex items-center gap-x-2 hover:text-secondary">
         {" "}
         Resume
         <FontAwesomeIcon icon={faFileArrowDown} />
