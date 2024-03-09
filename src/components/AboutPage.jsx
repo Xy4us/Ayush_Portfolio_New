@@ -13,7 +13,6 @@ const AboutPage = () => {
       <motion.h1
         className=" text-7xl font-bold text-primary p-2"
         variants={slideInFromInside(0.9)}
-        ref={ref}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >

@@ -6,10 +6,10 @@ import star1 from "../utils/assets/star1.png";
 const About = () => {
   return (
     <div
-      className=" w-full flex h-screen flex-col items-center justify-start"
+      className=" w-full flex  flex-col items-center justify-start"
       id="about"
     >
-      <div className="w-1 min-h-11 bg-transparent"></div>
+      <span className="w-1 min-h-14 bg-transparent">&nbsp;</span>
       <Tilt className="w-[200px] h-[200px] absolute right-52 rounded-full ">
         <img
           alt="image"

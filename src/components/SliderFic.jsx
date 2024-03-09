@@ -2,19 +2,9 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faReact,
-  faJava,
-  faJs,
-  faSquareGit,
-  faUnity,
-  faGoogle,
-  faPython,
-  faCss3,
-  faHtml5,
-} from "@fortawesome/free-brands-svg-icons";
-import Bradford from "../utils/assets/Bradford.png";
-import GlBajaj from "../utils/assets/GlBajaj.png";
+import { contentSkills } from "../utils/constants";
+import { contentEducation } from "../utils/constants";
+
 // import CIcon from "@coreui/icons-react";
 // import {
 //   cibCsswizardry,
@@ -30,48 +20,6 @@ import GlBajaj from "../utils/assets/GlBajaj.png";
 // } from "@coreui/icons";
 
 const SliderFic = () => {
-  const contentSkills = [
-    { icon: faReact, heading: "React", details: "I'm very Good at React" },
-    { icon: faJava, heading: "Java", details: "I'm very good at java" },
-    {
-      icon: faGoogle,
-      heading: "Google Firebase",
-      details: "I'm very good at FireBase",
-    },
-    {
-      icon: faJs,
-      heading: "JavaScript",
-      details: "I'm very good at java",
-    },
-    { icon: faSquareGit, heading: "Git", details: "I'm very good at java" },
-    {
-      icon: faUnity,
-      heading: "3-D Desigining",
-      details: "I'm very good at java",
-    },
-    // { icon: cibRedux, heading: "Python", details: "I'm very good at java" },
-    { icon: faCss3, heading: "CSS3", details: "I'm very good at CSS" },
-    { icon: faHtml5, heading: "HTML5", details: "I'm very good at HTLM5" },
-    // {
-    //   icon: cibTypescript,
-    //   heading: "TypeScript",
-    //   details: "I'm very good at TypeScript",
-    // },
-  ];
-
-  const contentEducation = [
-    {
-      logo: Bradford,
-      Name: "Bradford International School",
-      Education: "12th - (PCM)",
-    },
-    {
-      logo: GlBajaj,
-      Name: "GL Bajaj Institute of Technology and Management",
-      Education: "B.Tech - Computer Science - Airtificial Intelligence",
-    },
-  ];
-
   return (
     <div className="w-[90%] p-2 px-4 flex justify-between items-center">
       <Swiper

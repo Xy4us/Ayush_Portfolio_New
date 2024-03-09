@@ -12,6 +12,7 @@ module.exports = {
         primary: "var(--primary-color)",
         secondary: "var(--secondary-color)",
         tertiary: "var(--tertiary-color)",
+        subHeading: "var(--subHeading-color)",
       },
     },
   },
