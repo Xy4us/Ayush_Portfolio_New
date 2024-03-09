@@ -38,6 +38,7 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={750}
+            offset={-80}
           >
             About
           </Link>
@@ -47,6 +48,7 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={750}
+            offset={-80}
             className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-lg"
           >
             Skills

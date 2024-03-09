@@ -10,7 +10,7 @@ import {
   faHtml5,
   faC,
   faCss3Alt,
-  faNodeJs,
+  faNode,
   faFoursquare,
   faGitAlt,
   faGithub,
@@ -147,7 +147,7 @@ export const codingLanguages = [
   },
   {
     icon: faCss3Alt,
-    name: "CSS",
+    name: "CSS3",
     percentage: 99,
   },
   {
@@ -160,11 +160,16 @@ export const codingLanguages = [
 export const libraries = [
   {
     icon: faReact,
-    name: "React",
-    percentage: 85,
+    name: "React Js",
+    percentage: 95,
   },
   {
-    icon: faNodeJs,
+    icon: null,
+    name: "Redux Js",
+    percentage: 95,
+  },
+  {
+    icon: faNode,
     name: "Node Js",
     percentage: 50,
   },
@@ -223,7 +228,7 @@ export const tools = [
   },
   {
     icon: faSquareGooglePlus,
-    name: "Fire-Base",
+    name: "Google Firebase",
     percentage: 75,
   },
   {
@@ -240,5 +245,10 @@ export const tools = [
     icon: null,
     name: "VS Code",
     percentage: 99,
+  },
+  {
+    icon: null,
+    name: "SketchFab",
+    percentage: 60,
   },
 ];

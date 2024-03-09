@@ -6,9 +6,20 @@
 @tailwind utilities;
 
 html {
-  scrollbar-color: #9c59ef71 #030014;
+  scrollbar-color: #9c59ef71 #03001400;
   scrollbar-width: thin;
   scroll-padding: 0 10px;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  /* background-color: linear-gradient(145deg, #9c59ef, #dd524b); */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  /* background-color: linear-gradient(145deg, #9c59ef, #dd524b); */
 }
 
 body {
