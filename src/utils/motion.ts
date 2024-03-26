@@ -1,3 +1,5 @@
+import { delay } from "@reduxjs/toolkit/dist/utils";
+
 export function slideInFromLeft(delay: number) {
   return {
     hidden: { x: -100, opacity: 0 },
@@ -6,7 +8,7 @@ export function slideInFromLeft(delay: number) {
       opacity: 1,
       transition: {
         delay: delay,
-        duration: 0.5,
+        duration: 1,
       },
     },
   };
@@ -20,7 +22,7 @@ export function slideInFromRight(delay: number) {
       opacity: 1,
       transition: {
         delay: delay,
-        duration: 0.5,
+        duration: 1,
       },
     },
   };
@@ -34,7 +36,7 @@ export const slideInFromTop = (delay: number) => {
       opacity: 1,
       transition: {
         delay: delay,
-        duration: 0.5,
+        duration: 1,
       },
     },
   };
@@ -48,7 +50,7 @@ export const slideInFromBottom = (delay: number) => {
       opacity: 1,
       transition: {
         delay: delay,
-        duration: 0.5,
+        duration: 1,
       },
     },
   };
@@ -62,7 +64,22 @@ export const slideInFromInside = (delay: number) => {
       scale: 1,
       transition: {
         delay: delay,
-        duration: 0.5,
+        duration: 1,
+      },
+    },
+  };
+};
+
+export const slideInFromInsideRight = (delay: number) => {
+  return {
+    hidden: { z: -500, x: -200, scale: 0 },
+    visible: {
+      z: 0,
+      x: 0,
+      scale: 1,
+      transition: {
+        delay: delay,
+        duration: 1,
       },
     },
   };

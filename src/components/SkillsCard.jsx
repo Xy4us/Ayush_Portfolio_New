@@ -12,7 +12,7 @@ const SkillsCard = ({ icon, percentage, name, index }) => {
 
   return (
     <motion.div
-      variants={slideInFromLeft(index * 0.65)}
+      variants={slideInFromLeft(index * 0.45)}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       ref={ref}
@@ -22,16 +22,16 @@ const SkillsCard = ({ icon, percentage, name, index }) => {
       <div className="w-full flex items-center justify-between px-4 hover:scale-105 duration-200 ease-in-out select-none">
         <FontAwesomeIcon
           icon={icon ? icon : faCode}
-          className="text-[#9d59ef] text-3xl font-extrabold"
+          className="text-fifth text-3xl font-extrabold"
         />
         <p>{name}</p>
         <p className="text-sm text-tertiary">{percentage}%</p>
       </div>
 
-      <div className="w-full h-2 bg-green-100 relative rounded-lg">
+      <div className="w-full h-2 bg-primary relative rounded-lg">
         <div
           style={{ width: `${percentage}%` }}
-          className="absolute left-0 top-0 h-2 bg-secondary rounded-lg"
+          className="absolute left-0 top-0 h-2 bg-ninth rounded-lg"
         ></div>
       </div>
     </motion.div>

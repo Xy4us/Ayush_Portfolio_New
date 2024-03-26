@@ -32,4 +32,13 @@
     - Hero Section
     - 3-D Design Section
 
-# Also have to make a like button which will store the counts of like in the about Section
+# About Page
+
+    - Created a new id wiht about, aboutpage and aboutsection, as well as a black span so that we can make nav bafr link glow working
+    - Made a Tilted photo card and a paragraph section with resume download button in it
+    - Made 2 images look like 3d which are also in tilted div ahich on hover can give u vibe like 3D
+
+# Skills page
+
+    - Created a new id with skills, skillpage, and it has use state which switches between technical skills and communication skills
+    - In technica skills there are 3 div, Coding languages, Libraries & frameworks and Tools used, for each of them i have use SkillsCard used by mao function on the arry defiend in the constants file

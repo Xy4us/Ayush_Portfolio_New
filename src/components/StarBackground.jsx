@@ -21,7 +21,27 @@ const StarBackground = (props) => {
     return points;
   };
 
-  const [sphere] = useState(() => randomInSphere(5000, 1.5));
+  // const getRandomColor = () => {
+  //   const letters = "0123456789ABCDEF";
+  //   let color = "#";
+  //   for (let i = 0; i < 6; i++) {
+  //     color += letters[Math.floor(Math.random() * 16)];
+  //   }
+  //   return color;
+  // };
+
+  // const [color, setColor] = useState(new Color(getRandomColor()));
+  // const [targetColor, setTargetColor] = useState(new Color(getRandomColor()));
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setTargetColor(new Color(getRandomColor()));
+  //   }, 5000);
+
+  //   return () => clearInterval(interval);
+  // }, []);
+
+  const [sphere] = useState(() => randomInSphere(1500, 1.25));
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
@@ -33,7 +53,7 @@ const StarBackground = (props) => {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color="#fff"
+          color="#a06cd5"
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}

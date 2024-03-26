@@ -11,7 +11,7 @@ const AboutPage = () => {
   return (
     <div className="w-full h-full flex flex-col items-center" ref={ref}>
       <motion.h1
-        className=" text-7xl font-bold text-primary p-2"
+        className=" text-7xl font-bold text-primary p-2 "
         variants={slideInFromInside(0.9)}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -22,7 +22,7 @@ const AboutPage = () => {
         variants={slideInFromLeft(1.25)}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="custom-text-color font-custom2 font-semibold text-3xl p-2 "
+        className="text-fifth font-custom2 font-semibold text-3xl p-2 "
       >
         My Introduction
       </motion.p>

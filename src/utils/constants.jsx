@@ -17,9 +17,11 @@ import {
   faFigma,
   faNpm,
   faSquareGooglePlus,
+  faGitlab,
 } from "@fortawesome/free-brands-svg-icons";
 import Bradford from "../utils/assets/Bradford.png";
 import GlBajaj from "../utils/assets/GlBajaj.png";
+import Infant from "../utils/assets/Infant.png";
 
 const importAll = (r) => {
   return r.keys().map(r);
@@ -71,7 +73,7 @@ export const Technologies = [
 export const Skills = [
   "React,",
   "Firebase,",
-  "3-D Modeling,",
+  "3-D Designing,",
   "Three js,",
   "Redux,",
   "Java,",
@@ -114,13 +116,39 @@ export const contentSkills = [
 export const contentEducation = [
   {
     logo: Bradford,
-    Name: "Bradford International School",
-    Education: "12th - (PCM)",
+    name: "Bradford International School",
+    education: "11 & 12th - (PCM)",
+    date: "04/2020 - 04/2020",
+    points: [
+      "I took admission in this junior college in 2020",
+      "I took PCM as my subjects",
+      "I scored 80% in my 12th board exams",
+      "I scored 85% in my 11th board exams",
+    ],
   },
   {
     logo: GlBajaj,
-    Name: "GL Bajaj Institute of Technology and Management",
-    Education: "B.Tech - Computer Science - Airtificial Intelligence",
+    name: "GL Bajaj Institute of Technology and Management",
+    education: "B.Tech - Computer Science - Airtificial Intelligence",
+    date: "11/2022 - Present",
+    points: [
+      "I took admission in this college in 2022",
+      "I took Computer Science as my branch",
+      "I am currently studying Airtificial Intelligence",
+      "I am currently in my 2nd year",
+    ],
+  },
+  {
+    logo: Infant,
+    name: "Infant Jesus' School",
+    education: "10th",
+    date: "04/2019 - 04/2020",
+    points: [
+      "I took admission in this school in 2019",
+      "I scored 90% in my 10th board exams",
+      "I was the class topper in my 10th board exams",
+      "I was the class topper in my 9th board exams",
+    ],
   },
 ];
 
@@ -204,7 +232,7 @@ export const tools = [
   {
     icon: faGitAlt,
     name: "Git",
-    percentage: 90,
+    percentage: 95,
   },
   {
     icon: faGithub,
@@ -214,7 +242,7 @@ export const tools = [
   {
     icon: faFigma,
     name: "Figma",
-    percentage: 60,
+    percentage: 70,
   },
   {
     icon: null,
@@ -224,7 +252,7 @@ export const tools = [
   {
     icon: faNpm,
     name: "Npm",
-    percentage: 90,
+    percentage: 99,
   },
   {
     icon: faSquareGooglePlus,
@@ -251,4 +279,122 @@ export const tools = [
     name: "SketchFab",
     percentage: 60,
   },
+  {
+    icon: faGitlab,
+    name: "Git Lab",
+    percentage: 75,
+  },
 ];
+
+export const technicalQualifications = [
+  {
+    logo: images[5],
+    name: "Java",
+    points: [
+      "I have been learning Java since 2021",
+      "I have made many projects in Java",
+      "I have made many games in Java",
+      "I have made many applications in Java",
+    ],
+    date: "2021 - Present",
+    desc: "Java is a high-level, object-oriented programming language known for its platform independence and robustness.",
+  },
+  {
+    logo: images[1],
+    name: "C",
+    points: [
+      "I have been learning C since 2020",
+      "I have made many projects in C",
+      "I have made many games in C",
+      "I have made many applications in C",
+    ],
+    date: "2020 - Present",
+    desc: "C is a general-purpose, procedural computer programming language supporting structured programming.",
+  },
+  {
+    logo: images[2],
+    name: "C++",
+    points: [
+      "I have been learning C++ since 2020",
+      "I have made many projects in C++",
+      "I have made many games in C++",
+      "I have made many applications in C++",
+    ],
+    date: "2020 - Present",
+    desc: "C++ is a general-purpose programming language created as an extension of the C programming language.",
+  },
+  {
+    logo: images[8],
+    name: "HTML5",
+    points: [
+      "I have been learning HTML5 since 2019",
+      "I have made many projects in HTML5",
+      "I have made many games in HTML5",
+      "I have made many applications in HTML5",
+    ],
+    date: "2019 - Present",
+    desc: "HTML5 is a markup language used for structuring and presenting content on the World Wide Web.",
+  },
+  {
+    logo: images[3],
+    name: "CSS3",
+    points: [
+      "I have been learning CSS3 since 2019",
+      "I have made many projects in CSS3",
+      "I have made many games in CSS3",
+      "I have made many applications in CSS3",
+    ],
+    date: "2019 - Present",
+    desc: "CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.",
+  },
+  {
+    logo: images[15],
+    name: "Tailwind CSS",
+    points: [
+      "I have been learning Tailwind CSS since 2021",
+      "I have made many projects in Tailwind CSS",
+      "I have made many games in Tailwind CSS",
+      "I have made many applications in Tailwind CSS",
+    ],
+    date: "2021 - Present",
+    desc: "Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.",
+  },
+  {
+    logo: images[10],
+    name: "JavaScript",
+    points: [
+      "I have been learning JavaScript since 2020",
+      "I have made many projects in JavaScript",
+      "I have made many games in JavaScript",
+      "I have made many applications in JavaScript",
+    ],
+    date: "2020 - Present",
+    desc: "JavaScript is a programming language that conforms to the ECMAScript specification.",
+  },
+  {
+    logo: images[13],
+    name: "React Js",
+    points: [
+      "I have been learning React Js since 2020",
+      "I have made many projects in React Js",
+      "I have made many games in React Js",
+      "I have made many applications in React Js",
+    ],
+    date: "2020 - Present",
+    desc: "React is an open-source, front end, JavaScript library for building user interfaces or UI components.",
+  },
+  {
+    logo: images[14],
+    name: "Redux Js",
+    points: [
+      "I have been learning Redux Js since 2021",
+      "I have made many projects in Redux Js",
+      "I have made many games in Redux Js",
+      "I have made many applications in Redux Js",
+    ],
+    date: "2021 - Present",
+    desc: "Redux is an open-source JavaScript library for managing application state.",
+  },
+];
+
+export const AUTH_TOKEN = "nfp_zaQQUZSG8h1wN4EXbVUF6SuFuo2atkcn9b8b";

@@ -3,14 +3,15 @@ import { Link } from "react-scroll";
 
 const NavBar = () => {
   return (
-    <div className="w-full fixed flex top-0 justify-center items-center z-[50] shadow-lg shadow-[#6873c5]/40  backdrop-blur-sm">
+    <div className="w-full fixed flex top-0 justify-center items-center z-[50] shadow-lg shadow-[#815ac0]/40  backdrop-blur-sm">
       <div className="w-full rounded-lg p-2 md:w-[75%] flex justify-between ">
         <div className="w-[50%] flex items-center justify-start ">
           <Link
-            to="/"
-            className="hidden sm:block drop-shadow-2xl text-4xl custom-text-color font-custom3 font-bold cursor-pointer"
+            to="home"
+            smooth={true}
+            className="hidden sm:block text-4xl text-fifth font-custom1 font-bold cursor-pointer"
           >
-            Ayush Kumar
+            Ayush
           </Link>
 
           <Link
@@ -27,18 +28,18 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={750}
-            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-lg"
+            className="cursor-pointer hover:text-tertiary duration-200 ease-in-out text-lg"
           >
             Home
           </Link>
           <Link
             activeClass="active"
-            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-lg"
+            className="cursor-pointer hover:text-tertiary duration-200 ease-in-out text-lg"
             to="about"
             spy={true}
             smooth={true}
             duration={750}
-            offset={-80}
+            offset={-150}
           >
             About
           </Link>
@@ -48,10 +49,21 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={750}
-            offset={-80}
-            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-lg"
+            offset={-150}
+            className="cursor-pointer hover:text-tertiary duration-200 ease-in-out text-lg"
           >
             Skills
+          </Link>
+          <Link
+            activeClass="active"
+            to="qualification"
+            spy={true}
+            smooth={true}
+            duration={750}
+            offset={-150}
+            className="cursor-pointer hover:text-tertiary duration-200 ease-in-out text-lg"
+          >
+            Qualification
           </Link>
           <Link
             activeClass="active"
@@ -59,7 +71,8 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={750}
-            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-lg"
+            offset={-150}
+            className="cursor-pointer hover:text-tertiary duration-200 ease-in-out text-lg"
           >
             Projects
           </Link>
@@ -69,7 +82,7 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             duration={750}
-            className="cursor-pointer hover:text-secondary duration-200 ease-in-out text-lg"
+            className="cursor-pointer hover:text-tertiary duration-200 ease-in-out text-lg"
           >
             Contact Me
           </Link>

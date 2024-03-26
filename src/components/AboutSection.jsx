@@ -23,7 +23,7 @@ const AboutSection = () => {
           ref={ref}
           className="w-[50%] flex items-center justify-center"
         >
-          <Tilt className="bg-gradient-to-br from-blue-500 to-green-500 h-[370px] w-[500] rounded-lg">
+          <Tilt className="bg-gradient-to-br from-tertiary to-seventh h-[370px] w-[500] rounded-lg">
             <img alt="" className="w-full h-full" src={Ayush2} />
           </Tilt>
         </motion.div>
@@ -35,9 +35,7 @@ const AboutSection = () => {
         >
           <p>
             {" "}
-            Hello! I'm <span className=" custom-text-color">
-              Ayush Kumar
-            </span> a{" "}
+            Hello! I'm <span className="text-tertiary">Ayush Kumar</span> a{" "}
             <span className=" text-tertiary">
               {new Date().getFullYear() - new Date("2004-01-13").getFullYear()}
             </span>

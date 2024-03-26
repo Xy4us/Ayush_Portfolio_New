@@ -12,9 +12,3 @@ const Body = () => {
 };
 
 export default Body;
-
-{
-  /* <div className="">
-<Spline scene="https://prod.spline.design/LIY5q682aUCCvBJJ/scene.splinecode" />
-</div> */
-}

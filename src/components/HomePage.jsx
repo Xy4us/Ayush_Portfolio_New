@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeroSection from "./HeroSection";
 import Spline from "@splinetool/react-spline";
 import DesignSection from "./DesignSection";
@@ -14,7 +14,7 @@ const HomePage = () => {
       </div>
 
       <HeroSection />
-      <DesignSection />
+      {/* <DesignSection /> */}
     </div>
   );
 };

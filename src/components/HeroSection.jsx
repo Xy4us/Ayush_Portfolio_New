@@ -1,5 +1,5 @@
 import { motion, useMotionValue } from "framer-motion";
-import { slideInFromBottom } from "../utils/motion.ts";
+import { slideInFromInside } from "../utils/motion.ts";
 import Ayush from "../utils/assets/Ayush.png";
 import { ReactTyped } from "react-typed";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -42,12 +42,12 @@ const HeroSection = () => {
       <div className="w-[75%] flex flex-col-reverse items-center justify-center gap-y-10">
         <SliderFic />
         <motion.div
-          className="w-[90%] rounded-2xl flex flex-col items-center justify-between p-2 px-8 border-[0.5px] border-solid border-primary backdrop-blur-[3px]"
+          className="w-[90%] rounded-3xl flex flex-col items-center justify-between p-2 px-8 hover:border-none  border-b-2 border-sixth ease-linear"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           style={{
             background: isHovered
-              ? `radial-gradient(circle at ${mouseX.get()}px ${mouseY.get()}px, rgba(0, 251, 255, 0.451) 7%, rgba(255,255,255,0) 0%)`
+              ? `radial-gradient(circle at ${mouseX.get()}px ${mouseY.get()}px, rgb(222, 201, 233) 4%, rgba(255,255,255,0) 0%)`
               : "",
             transform: isHovered
               ? `perspective(300px) rotateY(${
@@ -55,56 +55,92 @@ const HeroSection = () => {
                 }deg) rotateX(${(mouseY.get() / rect.height - 0.5) * 5}deg)`
               : "none",
             boxShadow: isHovered
-              ? `${(mouseX.get() / rect.width - 0.5) * 20}px ${
-                  (mouseY.get() / rect.height - 0.5) * 20
-                }px 5px rgb(157, 89, 239)`
+              ? `${(mouseX.get() / rect.width - 0.5) * 9}px ${
+                  (mouseY.get() / rect.height - 0.5) * 9
+                }px 5px rgb(160, 108, 213)`
               : "none",
           }}
         >
           <motion.div
             className="w-full flex justify-between items-center"
-            variants={slideInFromBottom(1.25)}
+            variants={slideInFromInside(0.5)}
             ref={ref}
             initial="hidden"
-            animate="visible"
+            animate={inView ? "visible" : "hidden"}
           >
             <ul className="flex items-center justify-between flex-col-reverse gap-y-5">
               <li>
-                <FontAwesomeIcon
-                  className="text-[#bd5c7b] hover:text-black ease-in-out duration-150 text-xl cursor-pointer"
-                  icon={faInstagram}
-                />
+                <a
+                  href="http://www.instagram.com/xy4us"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    className="text-fifth hover:text-tenth ease-in-out duration-150 text-2xl cursor-pointer"
+                    icon={faInstagram}
+                  />
+                </a>
               </li>
               <li>
-                <FontAwesomeIcon
-                  className="text-[#bd5c7b] text-xl hover:text-black ease-in-out duration-150 cursor-pointer"
-                  icon={faDiscord}
-                />
+                <a
+                  href="https://discord.com/users/xy4us"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    className="text-fifth text-2xl hover:text-tenth  ease-in-out duration-150 cursor-pointer"
+                    icon={faDiscord}
+                  />
+                </a>
               </li>
               <li>
-                <FontAwesomeIcon
-                  className="text-[#bd5c7b] hover:text-black ease-in-out duration-150 text-xl cursor-pointer"
-                  icon={faGithub}
-                />
+                <a
+                  href="https://github.com/Xy4us"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    className="text-fifth hover:text-tenth  ease-in-out duration-150 text-2xl cursor-pointer"
+                    icon={faGithub}
+                  />
+                </a>
               </li>
               <li>
-                <FontAwesomeIcon
-                  className="text-[#bd5c7b] hover:text-black ease-in-out duration-150 text-xl cursor-pointer"
-                  icon={faLinkedinIn}
-                />
+                <a
+                  href="www.linkedin.com/in/ayush-kumar-xy4us"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    className="text-fifth hover:text-tenth ease-in-out duration-150 text-2xl cursor-pointer"
+                    icon={faLinkedinIn}
+                  />
+                </a>
               </li>
+              {/* <li>
+                <a
+                  href="mailto:sanbhutnik@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    className="text-fifth hover:text-tenth  ease-in-out duration-150 text-2xl cursor-pointer"
+                    icon={faSquareEnvelope}
+                  />
+                </a>
+              </li> */}
             </ul>
             <img alt="Ayush" src={Ayush} height="400px" width="400px" />
             <div className="flex flex-col items-start justify-between gap-y-3 ">
               <p className="text-6xl font-bold cursor-default">
-                Hi<span className="custom-text-color">!</span> I Am{" "}
+                Hi<span className="text-fifth">!</span> I Am{" "}
                 <span
                   style={{
                     transform: inView ? "none" : "translateX(-200px)",
                     opacity: inView ? 1 : 0,
                     transition: "all 7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
                   }}
-                  className="font-custom1 custom-text-color"
+                  className="font-custom1 text-fifth"
                 >
                   Ayush Kumar
                 </span>{" "}
@@ -123,7 +159,7 @@ const HeroSection = () => {
                     typeSpeed={18}
                     backSpeed={30}
                     loop
-                    className="text-3xl font-bold custom-text-color font-custom2"
+                    className="text-3xl font-bold text-fifth font-custom2"
                   />
                 </span>{" "}
               </p>

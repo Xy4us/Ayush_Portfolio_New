@@ -9,8 +9,7 @@ const About = () => {
       className=" w-full flex  flex-col items-center justify-start"
       id="about"
     >
-      <span className="w-1 min-h-14 bg-transparent">&nbsp;</span>
-      <Tilt className="w-[200px] h-[200px] absolute right-52 rounded-full ">
+      <Tilt className="w-[200px] h-[200px] absolute right-52 rounded-full">
         <img
           alt="image"
           src={robo2}
@@ -19,7 +18,7 @@ const About = () => {
           height="200"
           width="200"
           aria-hidden="true"
-          className="image-animate rotate-90 rounded-full shadow-lg shadow-[#3f67e1]/40 "
+          className="image-animate rounded-full shadow-lg shadow-[#815ac0]/40 "
         />
       </Tilt>
       <Tilt className="absolute left-52 h-[140px] w-[140px]">
@@ -31,7 +30,7 @@ const About = () => {
           height="140"
           width="140"
           aria-hidden="true"
-          className="image-animate rounded-full shadow-lg shadow-[#3f67e1]/40 p-2"
+          className="image-animate rounded-full shadow-lg shadow-[#815ac0]/40 p-2"
         />
       </Tilt>
       <AboutPage />
